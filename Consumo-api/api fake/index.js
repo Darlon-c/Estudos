@@ -5,7 +5,6 @@ const totalResult = document.getElementById("totalResult");
 let products = [];
 let cart = [];
 
-
 async function getProduct() {
   try {
     const response = await fetch("db.json");
@@ -14,12 +13,14 @@ async function getProduct() {
     item.innerHTML = products
       .map(
         (produto) => `
-      <div class="min-h-[250px] min-w[250px] bg-white">
+      <div class="shadow-lg min-h-[300px] min-w[250px] bg-white">
         <h3 class="flex justify-center py-2">${produto.nome}</h3>
         <img class="mx-auto"  src="${produto.imagem}" alt="${produto.nome}" width="200">
-        <p>Preço: R$ ${produto.preco}</p>
-        <button onclick="buyProduct(${produto.id})" class="bg-orange-300 cursor-pointer">Comprar</button>
-      </div>
+        <p class="flex justify-center py-1">Preço: R$ ${produto.preco.toFixed(2)}</p>
+        <div class="flex justify-center">
+            <button class="shadow-md bg-orange-400 cursor-pointer px-4 rounded-2xl hover:bg-orange-700" onclick="buyProduct(${produto.id})" >Comprar</button>
+         </div>
+        </div>
     `,
       )
       .join("");
