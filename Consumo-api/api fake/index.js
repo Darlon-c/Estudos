@@ -5,6 +5,7 @@ const totalResult = document.getElementById("totalResult");
 let products = [];
 let cart = [];
 
+
 async function getProduct() {
   try {
     const response = await fetch("db.json");
@@ -13,9 +14,9 @@ async function getProduct() {
     item.innerHTML = products
       .map(
         (produto) => `
-      <div>
-        <h3>${produto.nome}</h3>
-        <img src="${produto.imagem}" alt="${produto.nome}" width="100">
+      <div class="min-h-[250px] min-w[250px] bg-white">
+        <h3 class="flex justify-center py-2">${produto.nome}</h3>
+        <img class="mx-auto"  src="${produto.imagem}" alt="${produto.nome}" width="200">
         <p>Preço: R$ ${produto.preco}</p>
         <button onclick="buyProduct(${produto.id})" class="bg-orange-300 cursor-pointer">Comprar</button>
       </div>
@@ -34,7 +35,7 @@ function renderProduct() {
     const div = document.createElement("div");
     div.innerHTML = `
         <div class="flex justify-between items-center border-b py-2">
-            <span>${item.nome}</span>
+            <span class="font-semibold">${item.nome}</span>
             <div class="flex items-center gap-2">
                 <span>R$ ${item.preco}</span>
                 <span class="bg-gray-200 px-2 py-1 rounded">x${item.quantity}</span>
@@ -63,6 +64,7 @@ function buyProduct(id) {
   cartValue();
 }
 
+//calcula o valor total do carrinho
 function cartValue() {
   const valueTotal = cart.reduce((acc, product) => {
     return acc + product.preco * product.quantity;

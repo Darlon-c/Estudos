@@ -1,31 +1,31 @@
 [
   {
     "id": 1,
-    "nome": "Harry Potter™ - The Burrow",
+    "nome": "The Burrow",
     "preco": 2600,
     "imagem": "https://legobrasil.vtexassets.com/arquivos/ids/187513-500-500?v=638618521767400000&width=500&height=500&aspect=true"
   },
   {
     "id": 2,
-    "nome": "Harry Potter™ - Castelo de Hogwarts™: O Salão Principal",
+    "nome": "Castelo de Hogwarts™: O Salão Principal",
     "preco": 2000,
     "imagem": "https://legobrasil.vtexassets.com/arquivos/ids/186598-500-500?v=638514073083930000&width=500&height=500&aspect=true"
   },
   {
     "id": 3,
-    "nome": "Harry Potter™ - Gringotes, o Banco dos Bruxos",
+    "nome": "Gringotes, o Banco dos Bruxos",
     "preco": 4300,
     "imagem": "https://legobrasil.vtexassets.com/arquivos/ids/184094-500-500?v=638278919322130000&width=500&height=500&aspect=true"
   },
   {
     "id": 4,
-    "nome": "Harry Potter™ - Vila de Hogsmeade™",
+    "nome": "Vila de Hogsmeade™",
     "preco": 3800,
     "imagem": "https://legobrasil.vtexassets.com/arquivos/ids/191179-500-500?v=638968987739230000&width=500&height=500&aspect=true"
   },
   {
     "id": 5,
-    "nome": "Harry Potter™ - Mansão Malfoy",
+    "nome": "Mansão Malfoy",
     "preco": 1500,
     "imagem": "https://legobrasil.vtexassets.com/arquivos/ids/188138-500-500?v=638693673023270000&width=500&height=500&aspect=true"
   }
