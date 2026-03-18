@@ -66,13 +66,14 @@ function buyProduct(id) {
   cartValue();
 }
 
+//remover produto
 function removeProduct(id) {
-    cart = cart.filter((product) => {
-        return product.id !== id
-    })
+  cart = cart.filter((product) => {
+    return product.id !== id;
+  });
 
-renderProduct()
-cartValue()
+  renderProduct();
+  cartValue();
 }
 
 //calcula o valor total do carrinho
@@ -81,7 +82,11 @@ function cartValue() {
     return acc + product.preco * product.quantity;
   }, 0);
 
-  totalResult.innerHTML = valueTotal.toFixed(2);
+  if (cart.length === 0) {
+    totalResult.innerHTML = "Não há itens no carrinho";
+  } else {
+    totalResult.innerHTML = `R$ ${valueTotal.toFixed(2)}`;
+  }
 }
 
 getProduct();
