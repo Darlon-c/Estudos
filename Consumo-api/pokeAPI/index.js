@@ -2,8 +2,7 @@ const poke = document.getElementById("pokemons");
 const pokeInput = document.getElementById("pokeInput");
 const searchPoke = document.getElementById("searchPoke");
 
-let favoritePokemons = []
-
+let favoritePokemons = [];
 
 async function getPokemon() {
   const name = pokeInput.value.toLowerCase();
@@ -34,7 +33,7 @@ async function getPokemon() {
         </div>
     </div>
     `;
-    console.log(data)
+    console.log(data);
   } catch (err) {
     console.log(err);
   }
