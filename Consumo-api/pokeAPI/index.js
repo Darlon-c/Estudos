@@ -41,13 +41,18 @@ async function getPokemon() {
     `;
     console.log(data);
     saveStorage();
-    pokeInput.value = ''
+    pokeInput.value = "";
   } catch (err) {
     console.log(err);
   }
 }
 
 function showFavorites() {
+  if (favoritePokemons.length === 0) {
+    renderFavorites.innerHTML = `<p>Sem pokemons favoritos ainda.</p>`;
+    return;
+  }
+
   const render = favoritePokemons.map((pokemon) => {
     return `
     <div class="flex justify-center flex-col">
