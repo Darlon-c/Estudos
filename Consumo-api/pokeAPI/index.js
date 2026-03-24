@@ -53,11 +53,12 @@ function showFavorites() {
         <h2 class=""><strong>Nome:</strong> <span class="font-mono text-indigo-600">${pokemon.name}</span></h2>
         <p><strong>Tipo:</strong> ${pokemon.types.map((t) => t.type.name).join(" / ")}</p>
         <img src="${pokemon.sprites.front_default}">
+        <button class="border bg-indigo-600" onclick="removeFavorites(${pokemon.id})">Remover</button>
     </div>`;
   });
 
   renderFavorites.innerHTML = render.join("");
-  saveStorage()
+  saveStorage();
 }
 
 function addFavorites() {
@@ -72,6 +73,11 @@ function addFavorites() {
 
   console.log(favoritePokemons);
 }
+
+function removeFavorites(id) {
+  
+}
+
 
 function saveStorage() {
   localStorage.setItem("pokemon", JSON.stringify(favoritePokemons));
