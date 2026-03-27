@@ -53,7 +53,13 @@ async function getLyrics() {
 
 function copyLyrics() {
   if (!currentLyrics) {
-    Swal.fire("Nenhuma letra disponível para copiar.");
+    Swal.fire({
+      title: "Ops!",
+      text: "Nenhuma letra disponível para copiar.",
+      icon: "warning",
+      timer: 1500,
+      showConfirmButton: false,
+    });
     return;
   }
 
